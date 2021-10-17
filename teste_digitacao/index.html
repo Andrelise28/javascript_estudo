@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="masthead">
+        <h1>Faster</h1>
+    </header>
+
+    <main class="main">
+        <article class="article">
+            <p>Ferramenta para testar suas habilidades de digitação!</p>
+                <a class="btn" href="teclas.html">
+                    Mapa de teclas
+                </a>
+        </article>
+
+        <section class="test-area">
+            <div id="origin-text" oncopy="return false" oncut="return false">
+                <p>Hello world!</p>
+            </div>
+
+            <div class="test-wrapper">
+                <textarea id="test-area" name="textarea" rows="4"
+                    placeholder="Comece digitar."></textarea>
+            </div>
+
+            <div class="meta">
+                <section id="clock">
+                    <div class="timer">
+                        00:00:00
+                    </div>
+                </section>
+
+                <button id="reset">
+                    Tentar novamente
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
