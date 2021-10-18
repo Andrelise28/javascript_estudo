@@ -1,26 +1,23 @@
-var keys = document.querySelectorAll('.key');
+var teclas = document.querySelectorAll('.key');
 
-function setKeyPresset(event) {
+function teclaPrecionada(event) {
     event.preventDefault();
-    var code = event.keyCode;
-    console.log(code);
-    for (var key of keys) {
+    for (var key of teclas) {
         var keycode = key.getAttribute('keycode');
-        if (keycode == code) {
+        if (keycode ==  event.keyCode) {
             key.classList.add('presset');
         }
     }
 }
 
-function setKeyOut(event) {
-    var code = event.keyCode;
-    for (var key of keys) {
+function keycode(event) {
+    for (var key of teclas) {
         var keycode = key.getAttribute('keycode');
-        if (keycode == code) {
+        if (keycode == event.keyCode) {
             key.classList.remove('presset');
         }
     }
 }
 
-addEventListener("keydown", setKeyPresset);
-addEventListener("keyup", setKeyOut);
+addEventListener("keydown", teclaPrecionada);
+addEventListener("keyup", keycode);
